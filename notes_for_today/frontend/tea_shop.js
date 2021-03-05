@@ -1,11 +1,26 @@
 import configureStore from "./store/store.js";
 import { receiveGreenTea, receiveTea } from "./actions/tea_actions.js";
 
+import React from "react";
+import ReactDOM from 'react-dom';
 
+import Root from './components/root';
+
+//stuff inside will only fire once the entire document is loaded to the webpage. Prevents scripts from running before the elements exist. 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Welcome!");
 
+    //creates Redux store
     const store = configureStore();
+
+    //grabs root element from index.html
+    
+    const root = document.getElementById("root")
+
+    //renders root on webpage. store prop is equal to the store we created above.
+    ReactDOM.render(<Root store={store}></Root>, root)
+
+  
     window.store = store;
     window.receiveGreenTea = receiveGreenTea;
     window.receiveTea = receiveTea;

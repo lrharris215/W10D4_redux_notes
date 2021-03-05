@@ -29,4 +29,4 @@ module.exports = {
 };
 //the giant list of shit to install at the beginning of the project. 
 "npm install webpack webpack-cli react react-dom redux react-redux @babel/core babel-loader @babel/preset-react @babel/preset-env"
-
+//oh i got all this shit yesterday. but remember to install react and react-redux when doing a joint project i guess. 
