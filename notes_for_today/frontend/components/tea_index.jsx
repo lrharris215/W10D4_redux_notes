@@ -13,7 +13,17 @@ const TeaIndex = (props) => {
                     })
                 }
             </ul>
-            <TeaForm />
+            
+            <TeaForm receiveTea={props.receiveTea}/>
+
+            <h3>Green Teas</h3>
+            <ul>
+                {
+                    props.greenTeas.map((tea) => {
+                        return <li key ={tea.id}>Flavor: {tea.flavor}</li>
+                    })
+                }
+            </ul>
         </div>
     )
         
